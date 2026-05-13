@@ -55,21 +55,21 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="relative"
+            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+            className="relative perspective-1000"
           >
-            <div className="relative z-10 w-full group flex justify-center">
-              <Image
-                src="/firefly_gemini_flash.png"
-                alt="Modozo Product Interface"
-                width={1200}
-                height={1200}
-                className="w-full h-auto max-h-[80vh] object-contain transition-transform duration-1000 group-hover:scale-105"
-                priority
-              />
+            <div className="relative z-10 w-full group flex justify-center [transform-style:preserve-3d]">
+              <div className="relative overflow-hidden rounded-[32px] shadow-[20px_40px_80px_rgba(0,0,0,0.4)] border border-white/10 transition-transform duration-700 group-hover:scale-[1.02] group-hover:shadow-[30px_60px_100px_rgba(0,0,0,0.5)]">
+                <Image
+                  src="/hero.png"
+                  alt="Modozo Product Interface"
+                  width={1200}
+                  height={1200}
+                  className="w-full h-auto max-h-[80vh] object-contain"
+                  priority
+                />
+              </div>
             </div>
-
-
           </motion.div>
         </div>
       </div>

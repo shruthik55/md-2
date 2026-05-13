@@ -2,74 +2,67 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import FeatureCards from "@/components/sections/FeatureCards";
-import SocialProofSection from "@/components/sections/SocialProofSection";
 import WorkflowSplit from "@/components/sections/WorkflowSplit";
 import IntegrationsSection from "@/components/sections/IntegrationsSection";
-import FounderLetterSection from "@/components/sections/FounderLetterSection";
+import VIPServiceSection from "@/components/sections/VIPServiceSection";
 
 export default function Home() {
   return (
     <main className="flex-1">
       <Navbar />
-      
+
       {/* 1. Hero Section (Dark) */}
       <HeroSection />
 
       {/* 2. Three Pillar Feature Cards (Dark) */}
       <FeatureCards />
 
-      {/* 3. Social Proof Section (Dark) */}
-      <SocialProofSection />
-
       {/* 4. Workflow Block A: Faster to Market (Light) */}
       <WorkflowSplit
         id="workflow"
-        tag="Faster to Market"
-        emoji="⚡"
-        title="Reach a state of hyperfocus"
-        subtitle="Watch productivity and innovation soar for your entire team with Modozo."
+        tag="Rapid Fashion Deployment"
+        // emoji="⚡"
+        title="Accelerate your time to market"
+        subtitle="Watch productivity soar. Modozo provides a centralized hub to track every garment from initial sketch to final shipment."
         bullets={[
-          "Kanban system to visualize progress from design to shipment",
-          "Automate routine tasks like tracking time & action calendar",
-          "Enhanced collaboration, innovation & quick reaction times"
+          "Live Kanban boards to track collection progress",
+          "Automated Time & Action (T&A) calendar management",
+          "Proactive delay alerts and milestone tracking"
         ]}
-        image="/factory.png"
+        image="/dddd.png"
       />
 
       {/* 5. Workflow Block B: Improve Quality (Light) */}
       <WorkflowSplit
         reverse
-        tag="Improve Quality with AI"
-        emoji="🪄"
-        title="Remove redundant work and errors"
-        subtitle="Generate high-quality tech packs and prototypes to spot design flaws and potential issues."
+        tag="AI-Powered Techpacks"
+        // emoji="🪄"
+        title="Turn sketches into specs instantly"
+        subtitle="Stop wasting hours on manual data entry. Generate perfect, factory-ready technical packages in minutes to prevent manufacturing errors."
         bullets={[
-          "Create professional tech packs in minutes",
-          "AI and 10,000+ technical sketches to Communicate clearly",
-          "Automate processes and procedures with consistency"
+          "AI extraction of POMs (Points of Measure) from sketches",
+          "Centralized Bill of Materials (BOM) management",
+          "Automated grading rules and measurement generation"
         ]}
-        image="/techpack.png"
+        image="/sketch.png"
       />
 
       {/* 6. Workflow Block C: Better Visibility (Light) */}
       <WorkflowSplit
-        tag="Better Visibility"
-        emoji="🔎"
-        title="Lower your cost and increase profits"
-        subtitle="Modozo provides better visibility into resource allocation and helps to optimize the use of materials and labor."
+        tag="Global Supply Chain Visibility"
+        // emoji="🔎"
+        title="Lower costs and optimize sourcing"
+        subtitle="Modozo gives you complete visibility into your vendor network, resource allocation, and material costing across all collections."
         bullets={[
-          "Reduce the number of samples",
-          "Quickly iterate & adapt designs based on visual feedback",
-          "Easily scale with multiple product lines and variations"
+          "Compare vendor quotes and track material costs",
+          "Streamlined digital sample approvals and QC checks",
+          "Scale seamlessly across global manufacturing partners"
         ]}
-        image="/map.png"
+        image="/lower.png"
       />
 
-      {/* 7. Integrations Section (Dark) */}
-      <IntegrationsSection />
-
-      {/* 8. Founder Letter (Light) */}
-      <FounderLetterSection />
+      {/* 8. VIP Service Section (Dark) */}
+      <VIPServiceSection />
 
       <Footer />
     </main>
