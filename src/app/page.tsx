@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
+import InteractiveWorkflowSection from "@/components/sections/InteractiveWorkflowSection";
 import FeatureCards from "@/components/sections/FeatureCards";
 import WorkflowSplit from "@/components/sections/WorkflowSplit";
 import IntegrationsSection from "@/components/sections/IntegrationsSection";
@@ -14,7 +15,10 @@ export default function Home() {
       {/* 1. Hero Section (Dark) */}
       <HeroSection />
 
-      {/* 2. Three Pillar Feature Cards (Dark) */}
+      {/* 2. Interactive Workflow (Dark) - Inspired by plmbr.ai */}
+      <InteractiveWorkflowSection />
+
+      {/* 3. Three Pillar Feature Cards (Dark) */}
       <FeatureCards />
 
       {/* 4. Workflow Block A: Faster to Market (Light) */}
@@ -29,7 +33,11 @@ export default function Home() {
           "Automated Time & Action (T&A) calendar management",
           "Proactive delay alerts and milestone tracking"
         ]}
+<<<<<<< Updated upstream
         image="/dddd.png"
+=======
+        image="/photo7.png"
+>>>>>>> Stashed changes
       />
 
       {/* 5. Workflow Block B: Improve Quality (Light) */}
@@ -44,7 +52,11 @@ export default function Home() {
           "Centralized Bill of Materials (BOM) management",
           "Automated grading rules and measurement generation"
         ]}
+<<<<<<< Updated upstream
         image="/sketch.png"
+=======
+        image="/photo8.png"
+>>>>>>> Stashed changes
       />
 
       {/* 6. Workflow Block C: Better Visibility (Light) */}

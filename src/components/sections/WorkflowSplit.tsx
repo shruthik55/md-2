@@ -30,7 +30,11 @@ export default function WorkflowSplit({
     <section id={id} className="section-light py-16 md:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={clsx(
+<<<<<<< Updated upstream
           "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center",
+=======
+          "grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 items-center",
+>>>>>>> Stashed changes
           reverse && "lg:flex-row-reverse"
         )}>
           {/* Content */}
@@ -45,10 +49,10 @@ export default function WorkflowSplit({
               <div className="flex items-center gap-2 text-sm font-bold text-teal-accent uppercase tracking-widest">
                 <span>{tag}</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                 {title}
               </h2>
-              <p className="text-lg text-slate-text leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-text leading-relaxed">
                 {subtitle}
               </p>
             </div>
@@ -61,12 +65,12 @@ export default function WorkflowSplit({
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex items-start gap-3"
+                  className="flex items-start gap-4"
                 >
-                  <div className="mt-1 w-5 h-5 rounded-md bg-teal-accent/10 flex items-center justify-center shrink-0">
-                    <Check size={12} className="text-teal-accent" />
+                  <div className="mt-1 w-6 h-6 rounded-full bg-teal-accent/10 flex items-center justify-center shrink-0">
+                    <Check size={14} className="text-teal-accent" />
                   </div>
-                  <span className="text-sm font-medium text-slate-text">{bullet}</span>
+                  <span className="text-base font-medium text-slate-text">{bullet}</span>
                 </motion.li>
               ))}
             </ul>
@@ -74,27 +78,22 @@ export default function WorkflowSplit({
 
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, x: reverse ? -50 : 50 }}
+            initial={{ opacity: 0, scale: 0.95, x: reverse ? -50 : 50 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className={clsx("relative", reverse && "lg:order-1")}
+            className={clsx("relative w-full lg:w-[115%]", reverse ? "lg:order-1 lg:-ml-[15%]" : "lg:order-1 lg:-mr-[15%]")}
           >
-            <div className="relative z-10 bg-white p-2 rounded-3xl shadow-2xl shadow-blue-900/10 border border-slate-200 overflow-hidden group">
+            <div className="relative z-10 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden group">
               <Image 
                 src={image} 
                 alt={title} 
-                width={800} 
-                height={600} 
-                className="rounded-2xl w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                width={1400} 
+                height={1000} 
+                className="w-full h-auto transition-transform duration-1000 group-hover:scale-[1.02]"
+                priority
               />
             </div>
-            
-            {/* Background decorative shape */}
-            <div className={clsx(
-              "absolute -inset-4 bg-teal-accent/5 rounded-3xl -z-10",
-              reverse ? "translate-x-4 translate-y-4" : "-translate-x-4 translate-y-4"
-            )} />
           </motion.div>
         </div>
       </div>
