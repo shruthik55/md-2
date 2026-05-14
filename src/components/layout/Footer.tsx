@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Youtube, Linkedin, Instagram, Twitter, ArrowRight, Sparkles } from "lucide-react";
+import { Video, Globe, MessageCircle, Send, ArrowRight, Sparkles } from "lucide-react";
 
 /* ─── Data ─── */
 const footerLinks = {
@@ -33,10 +33,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Youtube, href: "#", label: "Youtube" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Video, href: "#", label: "Youtube" },
+  { icon: Globe, href: "#", label: "LinkedIn" },
+  { icon: MessageCircle, href: "#", label: "Instagram" },
+  { icon: Send, href: "#", label: "Twitter" },
 ];
 
 /* ─── Ambient Particles Canvas ─── */

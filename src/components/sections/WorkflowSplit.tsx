@@ -14,6 +14,7 @@ interface WorkflowSplitProps {
   reverse?: boolean;
   id?: string;
   emoji?: string;
+  theme?: "light" | "dark";
 }
 
 export default function WorkflowSplit({
@@ -25,17 +26,32 @@ export default function WorkflowSplit({
   reverse = false,
   id,
   emoji = "⚡",
+  theme = "light",
 }: WorkflowSplitProps) {
   return (
-    <section id={id} className="section-light py-16 md:py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id={id} className={clsx(
+      "relative py-16 md:py-20 overflow-hidden",
+      theme === "light" ? "section-light" : "bg-deep-navy"
+    )}>
+      {theme === "dark" && (
+        <>
+          {/* Background Elements */}
+          <div className="animated-grid opacity-30" />
+          <div className={clsx(
+            "glow-orb w-[500px] h-[500px] bg-rich-blue/10",
+            reverse ? "-top-40 -left-40" : "-top-40 -right-40"
+          )} />
+          <div className={clsx(
+            "glow-orb w-[400px] h-[400px] bg-teal-accent/5",
+            reverse ? "-bottom-20 -right-20" : "-bottom-20 -left-20"
+          )} />
+        </>
+      )}
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={clsx(
-<<<<<<< Updated upstream
-          "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center",
-=======
-          "grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 items-center",
->>>>>>> Stashed changes
-          reverse && "lg:flex-row-reverse"
+          "grid grid-cols-1 items-center gap-12 lg:gap-24",
+          reverse ? "lg:grid-cols-[1.5fr_1fr]" : "lg:grid-cols-[1fr_1.5fr]"
         )}>
           {/* Content */}
           <motion.div
@@ -43,7 +59,7 @@ export default function WorkflowSplit({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className={clsx("space-y-8", reverse && "lg:order-2")}
+            className={clsx("space-y-8", reverse ? "lg:order-2 lg:pl-12" : "lg:order-1")}
           >
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-sm font-bold text-teal-accent uppercase tracking-widest">
@@ -84,7 +100,12 @@ export default function WorkflowSplit({
             transition={{ duration: 0.8 }}
             className={clsx("relative w-full lg:w-[115%]", reverse ? "lg:order-1 lg:-ml-[15%]" : "lg:order-1 lg:-mr-[15%]")}
           >
-            <div className="relative z-10 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden group">
+            <div className={clsx(
+              "relative z-10 rounded-2xl overflow-hidden group",
+              theme === "light" 
+                ? "bg-white shadow-[0_8px_30px_rgb(0,0,0,0.08)]" 
+                : "glass-card shadow-[0_8px_30px_rgba(59,130,246,0.1)]"
+            )}>
               <Image 
                 src={image} 
                 alt={title} 

@@ -2,7 +2,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import InteractiveWorkflowSection from "@/components/sections/InteractiveWorkflowSection";
-import FeatureCards from "@/components/sections/FeatureCards";
 import WorkflowSplit from "@/components/sections/WorkflowSplit";
 import IntegrationsSection from "@/components/sections/IntegrationsSection";
 import VIPServiceSection from "@/components/sections/VIPServiceSection";
@@ -18,13 +17,11 @@ export default function Home() {
       {/* 2. Interactive Workflow (Dark) - Inspired by plmbr.ai */}
       <InteractiveWorkflowSection />
 
-      {/* 3. Three Pillar Feature Cards (Dark) */}
-      <FeatureCards />
-
-      {/* 4. Workflow Block A: Faster to Market (Light) */}
+      {/* 4. Workflow Block A: Faster to Market (Dark) */}
       <WorkflowSplit
         id="workflow"
         tag="Rapid Fashion Deployment"
+        theme="dark"
         // emoji="⚡"
         title="Accelerate your time to market"
         subtitle="Watch productivity soar. Modozo provides a centralized hub to track every garment from initial sketch to final shipment."
@@ -33,17 +30,14 @@ export default function Home() {
           "Automated Time & Action (T&A) calendar management",
           "Proactive delay alerts and milestone tracking"
         ]}
-<<<<<<< Updated upstream
-        image="/dddd.png"
-=======
-        image="/photo7.png"
->>>>>>> Stashed changes
+        image="/photo18.png"
       />
 
-      {/* 5. Workflow Block B: Improve Quality (Light) */}
+      {/* 5. Workflow Block B: Improve Quality (Dark) */}
       <WorkflowSplit
         reverse
         tag="AI-Powered Techpacks"
+        theme="dark"
         // emoji="🪄"
         title="Turn sketches into specs instantly"
         subtitle="Stop wasting hours on manual data entry. Generate perfect, factory-ready technical packages in minutes to prevent manufacturing errors."
@@ -52,16 +46,13 @@ export default function Home() {
           "Centralized Bill of Materials (BOM) management",
           "Automated grading rules and measurement generation"
         ]}
-<<<<<<< Updated upstream
-        image="/sketch.png"
-=======
-        image="/photo8.png"
->>>>>>> Stashed changes
+        image="/photo17.png"
       />
 
-      {/* 6. Workflow Block C: Better Visibility (Light) */}
+      {/* 6. Workflow Block C: Better Visibility (Dark) */}
       <WorkflowSplit
         tag="Global Supply Chain Visibility"
+        theme="dark"
         // emoji="🔎"
         title="Lower costs and optimize sourcing"
         subtitle="Modozo gives you complete visibility into your vendor network, resource allocation, and material costing across all collections."
@@ -70,7 +61,7 @@ export default function Home() {
           "Streamlined digital sample approvals and QC checks",
           "Scale seamlessly across global manufacturing partners"
         ]}
-        image="/lower.png"
+        image="/photo14.png"
       />
 
       {/* 8. VIP Service Section (Dark) */}

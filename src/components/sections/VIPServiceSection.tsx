@@ -12,19 +12,19 @@ const services = [
     icon: Headphones,
     title: "One-on-one support",
     desc: "A dedicated onboarding manager ensures comfort for your team with a detailed onboarding program, ongoing training sessions, webinars, and resources.",
-    visual: "/seccc.png"
+    visual: "/photo11.png"
   },
   {
     icon: DatabaseZap,
     title: "Data migration and transfer for FREE",
     desc: "We understand migrating is hard therefore we use advanced tools to migrate data from your legacy systems and offer hands-on support during the process.",
-    visual: "/vip_migration_v3.png"
+    visual: "/photo12.png"
   },
   {
     icon: Users,
     title: "Hands-on training with our experts",
     desc: "Work with our industry experts to support your onboarding, training and integration needs for all your departments and manufacturers.",
-    visual: "/vip_training_v4.png"
+    visual: "/photo13.png"
   },
 ];
 
@@ -99,21 +99,23 @@ export default function VIPServiceSection() {
         </div>
 
         {/* Dynamic Image Display */}
-        <div className="relative aspect-video w-full max-w-5xl mx-auto rounded-3xl overflow-hidden glass-card !p-0 border-white/10 shadow-2xl">
+        <div className="relative w-full max-w-5xl mx-auto px-4 md:px-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
-              initial={{ opacity: 0, filter: "blur(10px)" }}
-              animate={{ opacity: 1, filter: "blur(0px)" }}
-              exit={{ opacity: 0, filter: "blur(10px)" }}
-              transition={{ duration: 0.5 }}
-              className="absolute inset-0"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
             >
               <Image
                 src={services[activeIndex].visual}
                 alt={services[activeIndex].title}
-                fill
-                className="object-contain"
+                width={1600}
+                height={900}
+                className="w-full h-auto display-block"
+                priority
               />
             </motion.div>
           </AnimatePresence>
