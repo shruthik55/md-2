@@ -30,7 +30,7 @@ export default function Home() {
           "Automated Time & Action (T&A) calendar management",
           "Proactive delay alerts and milestone tracking"
         ]}
-        image="/photo18.png"
+        image="/photo32.png"
       />
 
       {/* 5. Workflow Block B: Improve Quality (Dark) */}
@@ -46,7 +46,7 @@ export default function Home() {
           "Centralized Bill of Materials (BOM) management",
           "Automated grading rules and measurement generation"
         ]}
-        image="/photo17.png"
+        image="/photo33.png"
       />
 
       {/* 6. Workflow Block C: Better Visibility (Dark) */}
@@ -61,7 +61,7 @@ export default function Home() {
           "Streamlined digital sample approvals and QC checks",
           "Scale seamlessly across global manufacturing partners"
         ]}
-        image="/photo14.png"
+        image="/phtot34.png"
       />
 
       {/* 8. VIP Service Section (Dark) */}

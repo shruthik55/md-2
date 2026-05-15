@@ -54,11 +54,11 @@ export default function HeroSection() {
           {/* Right: Immersive Cinematic Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ 
-              opacity: 1, 
+            animate={{
+              opacity: 1,
               scale: 1
             }}
-            transition={{ 
+            transition={{
               opacity: { duration: 1.5, delay: 0.2 },
               scale: { duration: 1.5, delay: 0.2 }
             }}
@@ -69,9 +69,9 @@ export default function HeroSection() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] bg-rich-blue/10 blur-[120px] rounded-full opacity-60 pointer-events-none" />
               <div className="absolute top-1/4 right-1/4 w-[60%] h-[60%] bg-teal-accent/10 blur-[90px] rounded-full mix-blend-screen pointer-events-none animate-pulse-soft" />
               <div className="absolute bottom-1/4 left-1/2 w-[40%] h-[40%] bg-[#FFD700]/5 blur-[100px] rounded-full mix-blend-overlay pointer-events-none" />
-              
+
               {/* Edge-Fading Mask Wrapper (Centered to reveal left/right cards) */}
-              <div 
+              <div
                 className="relative z-10 w-full flex justify-center items-center overflow-visible"
                 style={{
                   maskImage: 'radial-gradient(ellipse at 50% 50%, black 65%, transparent 98%)',
@@ -79,7 +79,7 @@ export default function HeroSection() {
                 }}
               >
                 <Image
-                  src="/photo19.png"
+                  src="/photo39.png"
                   alt="Modozo Immersive Fashion Tech Interface"
                   width={1800}
                   height={1800}
@@ -89,8 +89,8 @@ export default function HeroSection() {
               </div>
 
               {/* Cinematic Vignette Overlay */}
-              <div 
-                className="absolute inset-0 z-20 pointer-events-none" 
+              <div
+                className="absolute inset-0 z-20 pointer-events-none"
                 style={{
                   background: 'radial-gradient(ellipse at 50% 50%, transparent 55%, var(--deep-navy) 100%)',
                   opacity: 0.7
